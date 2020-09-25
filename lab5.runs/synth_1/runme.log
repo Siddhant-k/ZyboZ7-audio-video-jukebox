@@ -1,0 +1,772 @@
+
+*** Running vivado
+    with args -log Lab5.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Lab5.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Lab5.tcl -notrace
+Command: synth_design -top Lab5 -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3988 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 964.402 ; gain = 235.047
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Lab5' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/Lab5.vhd:30]
+WARNING: [Synth 8-5640] Port 'clk_out2' is missing in component declaration [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/Lab5.vhd:141]
+INFO: [Synth 8-3491] module 'ssm2603_i2s' declared at 'C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5 - Final Project/ssm2603_i2s.vhd:34' bound to instance 'codec' of component 'ssm2603_i2s' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/Lab5.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'ssm2603_i2s' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5 - Final Project/ssm2603_i2s.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'ssm2603_i2s' (1#1) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5 - Final Project/ssm2603_i2s.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'pxl_clk_gen' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.runs/synth_1/.Xil/Vivado-2024-DESKTOP-4H8L9CM/realtime/pxl_clk_gen_stub.vhdl:16]
+INFO: [Synth 8-6157] synthesizing module 'timing' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/timing.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'timing' (2#1) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/timing.v:52]
+INFO: [Synth 8-638] synthesizing module 'rgb2dvi' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/rgb2dvi.vhd:94]
+	Parameter kGenerateSerialClk bound to: 1 - type: bool 
+	Parameter kClkPrimitive bound to: PLL - type: string 
+	Parameter kClkRange bound to: 2 - type: integer 
+	Parameter kRstActiveHigh bound to: 1 - type: bool 
+	Parameter kD0Swap bound to: 0 - type: bool 
+	Parameter kD1Swap bound to: 0 - type: bool 
+	Parameter kD2Swap bound to: 0 - type: bool 
+	Parameter kClkSwap bound to: 0 - type: bool 
+INFO: [Synth 8-638] synthesizing module 'ClockGen' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/ClockGen.vhd:46]
+	Parameter kClkRange bound to: 2 - type: integer 
+	Parameter kClkPrimitive bound to: PLL - type: string 
+	Parameter kPolarity bound to: 1'b1 
+INFO: [Synth 8-3491] module 'ResetBridge' declared at 'C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/SyncAsyncReset.vhd:63' bound to instance 'LockLostReset' of component 'ResetBridge' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/ClockGen.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/SyncAsyncReset.vhd:72]
+	Parameter kPolarity bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/SyncAsyncReset.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b1 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/SyncAsync.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (3#1) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (4#1) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/SyncAsyncReset.vhd:72]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'SyncAsync' declared at 'C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/SyncAsync.vhd:61' bound to instance 'PLL_LockSyncAsync' of component 'SyncAsync' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/ClockGen.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized1' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized1' (4#1) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/SyncAsync.vhd:72]
+WARNING: [Synth 8-614] signal 'pRst' is read in the process but is not in the sensitivity list [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/ClockGen.vhd:97]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 15 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 12.500000 - type: double 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE bound to: 3 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 15 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter REF_JITTER2 bound to: 0.000000 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-113] binding component instance 'DVI_ClkGenerator' to cell 'PLLE2_ADV' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/ClockGen.vhd:239]
+WARNING: [Synth 8-6014] Unused sequential element pLockGained_reg was removed.  [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/ClockGen.vhd:102]
+INFO: [Synth 8-256] done synthesizing module 'ClockGen' (5#1) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/ClockGen.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'OutputSERDES' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/OutputSERDES.vhd:76]
+	Parameter kParallelWidth bound to: 10 - type: integer 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OutputBuffer' to cell 'OBUFDS' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/OutputSERDES.vhd:83]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerMaster' to cell 'OSERDESE2' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/OutputSERDES.vhd:92]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerSlave' to cell 'OSERDESE2' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/OutputSERDES.vhd:135]
+INFO: [Synth 8-256] done synthesizing module 'OutputSERDES' (6#1) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/OutputSERDES.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Encoder' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Encoder' (7#1) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'rgb2dvi' (8#1) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/rgb2dvi.vhd:94]
+WARNING: [Synth 8-6014] Unused sequential element slow_counter_reg was removed.  [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/Lab5.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element slow_clk_reg was removed.  [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/Lab5.vhd:229]
+INFO: [Synth 8-256] done synthesizing module 'Lab5' (9#1) [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/Lab5.vhd:30]
+WARNING: [Synth 8-3331] design TMDS_Encoder has unconnected port SerialClk
+WARNING: [Synth 8-3331] design TMDS_Encoder has unconnected port aRst
+WARNING: [Synth 8-3331] design rgb2dvi has unconnected port aRst_n
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port sys_clk
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[23]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[22]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[21]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[20]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[19]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[18]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[17]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[16]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[15]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[14]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[13]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[12]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[11]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[10]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[9]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[8]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[7]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[6]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[5]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[4]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[3]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[2]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[1]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1038.688 ; gain = 309.332
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1038.688 ; gain = 309.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1038.688 ; gain = 309.332
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1038.688 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/ip/pxl_clk_gen/pxl_clk_gen/pxl_clk_gen_in_context.xdc] for cell 'pixel_clock_gen'
+Finished Parsing XDC File [c:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/ip/pxl_clk_gen/pxl_clk_gen/pxl_clk_gen_in_context.xdc] for cell 'pixel_clock_gen'
+Parsing XDC File [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/constrs_1/imports/Lab5Files/Lab5.xdc]
+Finished Parsing XDC File [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/constrs_1/imports/Lab5Files/Lab5.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/constrs_1/imports/Lab5Files/Lab5.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Lab5_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Lab5_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1165.711 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1165.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1165.711 ; gain = 436.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1165.711 ; gain = 436.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  {c:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/ip/pxl_clk_gen/pxl_clk_gen/pxl_clk_gen_in_context.xdc}, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  {c:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/ip/pxl_clk_gen/pxl_clk_gen/pxl_clk_gen_in_context.xdc}, line 5).
+Applied set_property DONT_TOUCH = true for pixel_clock_gen. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1165.711 ; gain = 436.355
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "jingle" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6040] Register k_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register i_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-327] inferring latch for variable 'green_data_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/Lab5.vhd:222]
+WARNING: [Synth 8-327] inferring latch for variable 'blue_data_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/Lab5.vhd:222]
+WARNING: [Synth 8-327] inferring latch for variable 'red_data_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/Lab5.vhd:222]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1165.711 ; gain = 436.355
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 9     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 9     
+	   4 Input      5 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 3     
+	   8 Input      4 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               32 Bit    Registers := 5     
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 2     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 5     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 29    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 22    
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 2     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   4 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 11    
+	 112 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 8     
+	   7 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 9     
+	   3 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 47    
+	   4 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Lab5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 7     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 22    
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 2     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 8     
+	 112 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 8     
+	   7 Input      8 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 47    
+	   4 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+Module ssm2603_i2s 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+Module timing 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Registers : 
+	               11 Bit    Registers := 2     
+Module SyncAsync 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module SyncAsync__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module ClockGen 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module TMDS_Encoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      5 Bit       Adders := 3     
+	   4 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pC1_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:115]
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pC1_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:149]
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:110]
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pVde_2_reg' into 'DataEncoders[0].DataEncoder/pVde_2_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:150]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC0_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:114]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC0_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:148]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC1_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:115]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC1_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:149]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:110]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_2_reg' into 'DataEncoders[0].DataEncoder/pVde_2_reg' [C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.srcs/sources_1/imports/Lab5Files/TMDS_Encoder.vhd:150]
+WARNING: [Synth 8-6040] Register i_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register k_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+Why this net has no driver: _order_recur <const0>
+WARNING: [Synth 8-3331] design rgb2dvi has unconnected port aRst_n
+WARNING: [Synth 8-3331] design rgb2dvi has unconnected port SerialClk
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port sys_clk
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[23]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[22]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[21]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[20]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[19]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[18]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[17]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[16]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[15]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[14]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[13]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[12]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[11]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[10]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[9]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[8]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[7]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[6]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[5]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[4]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[3]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[2]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[1]
+WARNING: [Synth 8-3331] design ssm2603_i2s has unconnected port l_data[0]
+INFO: [Synth 8-3886] merging instance 'blue_data_reg[7]' (LDCP) to 'blue_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'blue_data_reg[1]' (LDCP) to 'blue_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'blue_data_reg[3]' (LDCP) to 'blue_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'blue_data_reg[2]' (LDCP) to 'blue_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'blue_data_reg[4]' (LDCP) to 'blue_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'blue_data_reg[6]' (LDCP) to 'blue_data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'blue_data_reg[5]' (LDCP) to 'blue_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'green_data_reg[7]' (LD) to 'green_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'green_data_reg[1]' (LD) to 'green_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'green_data_reg[3]' (LD) to 'green_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'green_data_reg[2]' (LD) to 'green_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'green_data_reg[4]' (LD) to 'green_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'green_data_reg[6]' (LD) to 'green_data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'green_data_reg[5]' (LD) to 'green_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'red_data_reg[7]' (LD) to 'red_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'red_data_reg[1]' (LD) to 'red_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'red_data_reg[3]' (LD) to 'red_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'red_data_reg[2]' (LD) to 'red_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'red_data_reg[4]' (LD) to 'red_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'red_data_reg[6]' (LD) to 'red_data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'red_data_reg[5]' (LD) to 'red_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (hdmi_controller/\DataEncoders[1].DataEncoder/pC0_1_reg )
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/pC0_2_reg' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/pC0_1_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tone_terminal_count_reg[8] )
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/pDataOut_1_reg[7]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/pDataOut_1_reg[6]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/pDataOut_1_reg[5]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/pDataOut_1_reg[4]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/pDataOut_1_reg[3]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/pDataOut_1_reg[2]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/pDataOut_1_reg[1]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[0]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[3]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/pDataOut_1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n1d_1_reg[2]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/pDataOut_1_reg[7]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/pDataOut_1_reg[6]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/pDataOut_1_reg[5]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/pDataOut_1_reg[4]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/pDataOut_1_reg[3]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/pDataOut_1_reg[2]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/pDataOut_1_reg[1]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[0]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[3]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/pDataOut_1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n1d_1_reg[2]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/pDataOut_1_reg[7]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/pDataOut_1_reg[6]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/pDataOut_1_reg[5]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/pDataOut_1_reg[4]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/pDataOut_1_reg[3]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/pDataOut_1_reg[2]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/pDataOut_1_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[0]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[3]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/pDataOut_1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/n1d_1_reg[2]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/pC0_1_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (hdmi_controller/\DataEncoders[1].DataEncoder/pC0_1_reg )
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n0q_m_2_reg[3]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/q_m_2_reg[8]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n0q_m_2_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/pC0_1_reg' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n0q_m_2_reg[2]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n0q_m_2_reg[3]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/q_m_2_reg[8]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n0q_m_2_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n0q_m_2_reg[2]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/n0q_m_2_reg[3]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/q_m_2_reg[8]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/n0q_m_2_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/n0q_m_2_reg[2]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/q_m_2_reg[7]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/q_m_2_reg[6]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/q_m_2_reg[5]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/q_m_2_reg[4]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/q_m_2_reg[3]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/q_m_2_reg[2]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/q_m_2_reg[1]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[0]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[0].DataEncoder/n1q_m_2_reg[2]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/q_m_2_reg[7]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/q_m_2_reg[6]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/q_m_2_reg[5]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/q_m_2_reg[4]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/q_m_2_reg[3]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/q_m_2_reg[2]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/q_m_2_reg[1]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[0]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[1].DataEncoder/n1q_m_2_reg[2]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/q_m_2_reg[7]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/q_m_2_reg[6]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/q_m_2_reg[5]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/q_m_2_reg[4]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/q_m_2_reg[3]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/q_m_2_reg[2]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/q_m_2_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[1]' (FD) to 'hdmi_controller/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (hdmi_controller/\DataEncoders[2].DataEncoder/n1q_m_2_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (green_data_reg[0]) is unused and will be removed from module Lab5.
+WARNING: [Synth 8-3332] Sequential element (red_data_reg[0]) is unused and will be removed from module Lab5.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1165.711 ; gain = 436.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|Lab5        | p_0_out    | 128x9         | LUT            | 
+|Lab5        | p_0_out    | 256x9         | LUT            | 
+|Lab5        | p_0_out    | 128x9         | LUT            | 
+|Lab5        | p_0_out    | 256x9         | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1165.711 ; gain = 436.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1191.906 ; gain = 462.551
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1192.914 ; gain = 463.559
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1192.914 ; gain = 463.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1192.914 ; gain = 463.559
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1192.914 ; gain = 463.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1192.914 ; gain = 463.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1192.914 ; gain = 463.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1192.914 ; gain = 463.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |pxl_clk_gen   |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |pxl_clk_gen |     1|
+|2     |CARRY4      |    91|
+|3     |LUT1        |    21|
+|4     |LUT2        |   279|
+|5     |LUT3        |    36|
+|6     |LUT4        |    73|
+|7     |LUT5        |    50|
+|8     |LUT6        |   224|
+|9     |MUXF7       |    16|
+|10    |OSERDESE2   |     4|
+|11    |OSERDESE2_1 |     4|
+|12    |PLLE2_ADV   |     1|
+|13    |FDCE        |     3|
+|14    |FDPE        |     5|
+|15    |FDRE        |   288|
+|16    |FDSE        |     9|
+|17    |LDCP        |     1|
+|18    |IBUF        |     8|
+|19    |OBUF        |     5|
+|20    |OBUFDS      |     4|
++------+------------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+--------------------------+------+
+|      |Instance                             |Module                    |Cells |
++------+-------------------------------------+--------------------------+------+
+|1     |top                                  |                          |  1125|
+|2     |  codec                              |ssm2603_i2s               |    36|
+|3     |  hdmi_controller                    |rgb2dvi                   |    99|
+|4     |    \ClockGenInternal.ClockGenX      |ClockGen                  |    12|
+|5     |      LockLostReset                  |ResetBridge_5             |     3|
+|6     |        SyncAsyncx                   |SyncAsync_6               |     2|
+|7     |      PLL_LockSyncAsync              |SyncAsync__parameterized1 |     2|
+|8     |    ClockSerializer                  |OutputSERDES              |     3|
+|9     |    \DataEncoders[0].DataEncoder     |TMDS_Encoder              |    30|
+|10    |    \DataEncoders[0].DataSerializer  |OutputSERDES_0            |     3|
+|11    |    \DataEncoders[1].DataEncoder     |TMDS_Encoder_1            |    25|
+|12    |    \DataEncoders[1].DataSerializer  |OutputSERDES_2            |     3|
+|13    |    \DataEncoders[2].DataEncoder     |TMDS_Encoder_3            |    18|
+|14    |    \DataEncoders[2].DataSerializer  |OutputSERDES_4            |     3|
+|15    |    LockLostReset                    |ResetBridge               |     2|
+|16    |      SyncAsyncx                     |SyncAsync                 |     2|
+|17    |  timing_inst                        |timing                    |   330|
++------+-------------------------------------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1192.914 ; gain = 463.559
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 36 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1192.914 ; gain = 336.535
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1192.914 ; gain = 463.559
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1200.789 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1204.813 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+161 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1204.813 ; gain = 747.691
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1204.813 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/siddh/Desktop/Lab5 - Final Project/lab5.runs/synth_1/Lab5.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Lab5_utilization_synth.rpt -pb Lab5_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  5 16:09:18 2019...

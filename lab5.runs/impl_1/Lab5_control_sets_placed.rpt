@@ -1,0 +1,98 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 16:09:57 2019
+| Host         : DESKTOP-4H8L9CM running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Lab5_control_sets_placed.rpt
+| Design       : Lab5
+| Device       : xc7z010
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    70 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              42 |           25 |
+| No           | No                    | Yes                    |               6 |            2 |
+| No           | Yes                   | No                     |             106 |           29 |
+| Yes          | No                    | No                     |              13 |            4 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             139 |           42 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+--------------------------------+------------------------------------------------------------------------------------+------------------+----------------+
+|          Clock Signal          |          Enable Signal         |                                  Set/Reset Signal                                  | Slice Load Count | Bel Load Count |
++--------------------------------+--------------------------------+------------------------------------------------------------------------------------+------------------+----------------+
+|  blue_data_reg[0]/G0           |                                |                                                                                    |                1 |              1 |
+|  pixel_clock_gen/inst/clk_out2 | codec/E[0]                     | codec/SR[0]                                                                        |                1 |              1 |
+|  pixel_clock_gen/inst/clk_out2 | christmas_check                | tone_terminal_count                                                                |                1 |              1 |
+|  pixel_clock_gen/inst/clk_out1 |                                | hdmi_controller/ClockGenInternal.ClockGenX/in0                                     |                1 |              2 |
+|  pixel_clock_gen/inst/clk_out1 |                                | hdmi_controller/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              4 |
+|  pixel_clock_gen/inst/clk_out1 |                                | hdmi_controller/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1_n_0                 |                2 |              4 |
+|  pixel_clock_gen/inst/clk_out2 | codec/bclk_cnt                 |                                                                                    |                1 |              5 |
+|  pixel_clock_gen/inst/clk_out2 | codec/E[0]                     |                                                                                    |                3 |              8 |
+|  pixel_clock_gen/inst/clk_out2 | tone_terminal_count[7]_i_1_n_0 | tone_terminal_count                                                                |                6 |              8 |
+|  pixel_clock_gen/inst/clk_out1 |                                | timing_inst/vpos_ena                                                               |                3 |             11 |
+|  pixel_clock_gen/inst/clk_out1 | timing_inst/hpos_clr0          | timing_inst/vpos_clr                                                               |                3 |             11 |
+|  pixel_clock_gen/inst/clk_out1 |                                |                                                                                    |               11 |             19 |
+|  pixel_clock_gen/inst/clk_out1 |                                | hdmi_controller/DataEncoders[0].DataEncoder/SR[0]                                  |                5 |             20 |
+|  pixel_clock_gen/inst/clk_out2 |                                |                                                                                    |               13 |             22 |
+|  pixel_clock_gen/inst/clk_out2 |                                | slow_counter1[23]_i_1_n_0                                                          |                6 |             23 |
+|  pixel_clock_gen/inst/clk_out2 |                                | slow_counter3[23]_i_1_n_0                                                          |                6 |             23 |
+|  pixel_clock_gen/inst/clk_out2 |                                | slow_counter2[25]_i_1_n_0                                                          |                7 |             25 |
+|  pixel_clock_gen/inst/clk_out2 | j_rep[6]_i_2_n_0               | tone_terminal_count                                                                |               13 |             39 |
+|  pixel_clock_gen/inst/clk_out2 | i[31]_i_1_n_0                  | tone_terminal_count                                                                |               10 |             39 |
+|  pixel_clock_gen/inst/clk_out2 | k[31]_i_1_n_0                  | tone_terminal_count                                                                |                8 |             40 |
++--------------------------------+--------------------------------+------------------------------------------------------------------------------------+------------------+----------------+
+
+

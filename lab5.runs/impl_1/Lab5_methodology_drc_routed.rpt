@@ -1,0 +1,51 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Dec  5 16:10:23 2019
+| Host         : DESKTOP-4H8L9CM running 64-bit major release  (build 9200)
+| Command      : report_methodology -file Lab5_methodology_drc_routed.rpt -pb Lab5_methodology_drc_routed.pb -rpx Lab5_methodology_drc_routed.rpx
+| Design       : Lab5
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 3
++-----------+----------+-----------------------+------------+
+| Rule      | Severity | Description           | Violations |
++-----------+----------+-----------------------+------------+
+| TIMING-16 | Warning  | Large setup violation | 2          |
+| TIMING-20 | Warning  | Non-clocked latch     | 1          |
++-----------+----------+-----------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -2.655 ns between state_reg[2]/C (clocked by clk_out2_pxl_clk_gen) and hdmi_controller/DataEncoders[1].DataEncoder/pDataOut_1_reg[0]/D (clocked by clk_out1_pxl_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -2.709 ns between state_reg[2]/C (clocked by clk_out2_pxl_clk_gen) and hdmi_controller/DataEncoders[2].DataEncoder/pDataOut_1_reg[0]/D (clocked by clk_out1_pxl_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch blue_data_reg[0]/L7 (in blue_data_reg[0] macro) cannot be properly analyzed as its control pin blue_data_reg[0]/L7/G is not reached by a timing clock
+Related violations: <none>
+
+
